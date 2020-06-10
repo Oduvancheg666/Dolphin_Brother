@@ -5,7 +5,7 @@ html, body {
     background-size: cover;
     background-position: center;
     text-align: center;
-    font-family: 'Roboto Slab', serif;
+    font-family:'Roboto Slab', serif;
     overflow: hidden;
 }
 .button {
@@ -19,7 +19,7 @@ html, body {
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: absolute;
-    padding: 11px 11px;
+ 
 }
 
 .next {
@@ -33,12 +33,12 @@ html, body {
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: absolute;
-    padding: 11px 11px;
+
 }
 #text{
-    margin-top: 20%;
+    margin-top: 5%;
     vertical-align: middle;
-    font-size: 70px;
+    font-size: 80px;
     color: white;
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
     -webkit-text-stroke-width: 2.5px;
@@ -48,7 +48,7 @@ html, body {
 #timer{
     margin-top: 60%;
     vertical-align: middle;
-    font-size: 70px;
+    font-size: 80px;
     color: white;
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
     -webkit-text-stroke-width: 2.5px;
@@ -56,53 +56,56 @@ html, body {
 
 }
 #time {
-    height: 100px;
-    width: 250px;
-    top: 17%;
+    height: 94px;
+    width: 242px;
+    top: 15%;
     left: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
     margin-left: -255px;
     background: rgb(230, 225, 225, 0.85);
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: absolute;
-    padding: 11px 11px; 
     text-align: center;
     
 }
 
 .min {
-        height: 25px;
-        width: 70px;
-        top: 25%;
-        left: 81.5%;
+        height: 50px;
+        width: 125px;
+        top: 23%;
+        left: 80%;
         margin-left: -255px;
-        background: rgb(230, 225, 225, 0.85);
+        background: rgba(230, 225, 225, 0.65);
         position: absolute;
-        
+        font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
+        font-weight: bold;
        
       
 }
 .onehalf {
-        height: 25px;
-        width: 70px;
-        top: 25%;
-        left: 90.5%;
+        height: 50px;
+        width: 125px;
+        top: 23%;
+        left: 93%;
         margin-left: -255px;
-        background: rgb(230, 225, 225, 0.85);
+        background: rgba(230, 225, 225, 0.65);
         position: absolute;
-      
+        font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
+        font-weight: bold;
       
 }
 
 .Reset {
-        height: 25px;
-        width: 70px;
-        top: 25%;
-        left: 99.5%;
+        height: 50px;
+        width: 250px;
+        top: 26%;
+        left: 80%;
         margin-left: -255px;
-        background: rgb(230, 225, 225, 0.85);
+        background: rgba(230, 225, 225, 0.65);
         position: absolute;
-     
+        font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
+        font-weight: bold;
      
      
         
