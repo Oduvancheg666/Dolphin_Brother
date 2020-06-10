@@ -17,20 +17,19 @@
     <input class="button" type="button" id="button" value="Play" />
     <input class="next" type="button" id="next" value="Next" />
     <input type="text" name="time" id="time">
-    <input type="submit" id="Reset" value="Reset">
+    <input type="submit" class="min" onclick="document.getElementById('time').value='60'; return false;" value = "1 min" />
+    <input type="submit"  class="onehalf" onclick="document.getElementById('time').value='90'; return false;"  value = "1.5 min" />
+    <input type="submit" class="Reset" value="Reset">
     <div id="timer"></div>
     <div id="text"> </div> 
-    <form>
-   
-    
-</form>
     </form>
+    
+
+    
     <script>
       let timerInput = document.getElementById("time");
       let buttonRun = document.getElementById("button")
       let timerShow = document.getElementById("timer");
-  
-
       buttonRun.addEventListener('click', function() {
           timeMinut = parseInt(timerInput.value) 
       })
