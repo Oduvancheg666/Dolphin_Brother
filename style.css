@@ -9,31 +9,36 @@ html, body {
     overflow: hidden;
 }
 .button {
-    height: 100px;
-    width: 250px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    height: 150px;
+    width: 375px;
     top: 15%;
-    left: 50%;
-    margin-left: -255px;
-    background: rgba(230, 225, 225, 0.65);
+    left: 37%;
+    margin-left: -265px;
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
-    font-weight: bold;
     position: absolute;
- 
+    font-weight: bold;
+    color: white;
+    background: rgb(64,199,129);
+    box-shadow: 0 -5px rgb(53,167,110) inset;
+   
 }
 
 .next {
-    height: 100px;
-    width: 250px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.7);
-    top: 23%;
-    left: 50%;
-    margin-left: -255px;
+    height: 150px;
+    width: 375px;
+    top: 24%;
+    left: 37%;
+    margin-left: -265px;
     background: rgba(230, 225, 225, 0.65);
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: absolute;
-
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -5px rgb(53,167,110) inset;
+   
 }
 #text{
     margin-top: 5%;
@@ -56,57 +61,72 @@ html, body {
 
 }
 #time {
-    height: 94px;
-    width: 242px;
+    height: 144px;
+    width: 367px;
     top: 15%;
     left: 80%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.7);
-    margin-left: -255px;
+    margin-left: -265px;
     background: rgb(230, 225, 225, 0.85);
-    font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
+    font: 150px Trebuchet MS, Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, .5);
     font-weight: bold;
     position: absolute;
     text-align: center;
-    
+   
 }
 
 .min {
-        height: 50px;
-        width: 125px;
-        top: 23%;
+        height: 70px;
+        width: 185px;
+        top: 24%;
         left: 80%;
-        margin-left: -255px;
+        margin-left: -265px;
         background: rgba(230, 225, 225, 0.65);
         position: absolute;
         font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
-       
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        background: rgb(64,199,129);
+        box-shadow: 0 -5px rgb(53,167,110) inset;
+        transition: 0.2s;
       
 }
 .onehalf {
-        height: 50px;
-        width: 125px;
-        top: 23%;
-        left: 93%;
-        margin-left: -255px;
+        height: 70px;
+        width: 185px;
+        top: 24%;
+        left: 99.5%;
+        margin-left: -265px;
         background: rgba(230, 225, 225, 0.65);
         position: absolute;
         font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
-      
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        background: rgb(64,199,129);
+        box-shadow: 0 -5px rgb(53,167,110) inset;
+        transition: 0.2s;
 }
 
 .Reset {
-        height: 50px;
-        width: 250px;
-        top: 26%;
+        height: 70px;
+        width: 375px;
+        top: 28.5%;
         left: 80%;
-        margin-left: -255px;
+        margin-left: -265px;
         background: rgba(230, 225, 225, 0.65);
         position: absolute;
         font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
-     
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        background: rgb(64,199,129);
+        box-shadow: 0 -5px rgb(53,167,110) inset;
+        transition: 0.2s;
      
         
 }
