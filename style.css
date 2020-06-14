@@ -59,7 +59,6 @@ html, body {
     top: 24%;
     left: 37%;
     margin-left: -265px;
-    background: rgba(230, 225, 225, 0.65);
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: absolute;
@@ -120,7 +119,6 @@ html, body {
         top: 24%;
         left: 80%;
         margin-left: -265px;
-        background: rgba(230, 225, 225, 0.65);
         position: absolute;
         font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
@@ -138,7 +136,6 @@ html, body {
         top: 24%;
         left: 99.5%;
         margin-left: -265px;
-        background: rgba(230, 225, 225, 0.65);
         position: absolute;
         font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
@@ -156,7 +153,6 @@ html, body {
         top: 28.5%;
         left: 80%;
         margin-left: -265px;
-        background: rgba(230, 225, 225, 0.65);
         position: absolute;
         font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
