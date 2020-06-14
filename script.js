@@ -1,4 +1,4 @@
-let phrases [
+var phrases [
 
 "ЛЫЖНИК",
 "СТЕНГАЗЕТА",
