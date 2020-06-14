@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <form onclick="var randIndex = Math.floor(Math.random() * phrases.length);
+   <form onclick="var randIndex = Math.floor(Math.random() * phrases.length);
       document.getElementById('button').onclick = function() {
       document.getElementById('text').textContent = (phrases[randIndex]);
       document.getElementById('button').hidden = true; 
@@ -43,8 +43,6 @@
 
     
     <script>
-      
-   
       let timerInput = document.getElementById("time");
       let buttonRun = document.getElementById("button")
       let timerShow = document.getElementById("timer");
@@ -65,19 +63,12 @@
           timerShow.innerHTML = strTimer;
       }
       --timeMinut;
-  }, 1000) 
-      
-      
-    
-
-   
-    var elem = document.getElementById('total'), num = +elem.innerHTML;
-    function addNum() {
+  }, 1000)
+      var elem = document.getElementById('total'), num = +elem.innerHTML;
+      function addNum() {
         num++;
       elem.innerHTML = num;}
 
-    
-      
 
 
     </script>
