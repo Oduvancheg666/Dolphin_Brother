@@ -8,7 +8,7 @@ html, body {
     font-family:'Roboto Slab', serif;
     overflow: hidden;
 }
-//адаптация кнопок для ios
+
 input, button { -webkit-appearance: none;}
 
 body {
