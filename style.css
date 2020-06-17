@@ -9,19 +9,20 @@ html, body {
     overflow: hidden;
 }
 
-input, button { -webkit-appearance: none;
+input, button { 
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 
 }
 
 body {
-    display: block;
     margin: 1px;
     margin-top: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
     margin-left: 1px;
+    position: fixed;
 }
 #minus {
     height: 150px;
