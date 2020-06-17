@@ -8,6 +8,7 @@ html, body {
     overflow: hidden;
 }
 
+input, button { -webkit-appearance: none;}
 
 #minus {
     height: 150px;
