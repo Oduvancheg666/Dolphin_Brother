@@ -121,7 +121,7 @@ body {
     font-weight: bold;
     position: absolute;
     text-align: center;
-    box-sizing: content-box;
+    visibility: hidden;
 }
 
 #total{
