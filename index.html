@@ -11,10 +11,11 @@
   </head>
 
   <body>
+    <div>
    <form onclick="var randIndex = Math.floor(Math.random() * phrases.length);
-      document.getElementById('button').onclick = function() {
+      document.getElementById('play').onclick = function() {
       document.getElementById('text').textContent = (phrases[randIndex]);
-      document.getElementById('button').hidden = true; 
+      document.getElementById('play').hidden = true; 
       }
       document.getElementById('next').onclick = function() {
       document.getElementById('text').textContent = (phrases[randIndex]); }
@@ -35,17 +36,17 @@
     <input type="submit" class="Reset" value="Reset">
     <input id="minus" type="button" value="-">
     <input id="plus" type="button" value="+">
-    <input class="button" type="button" id="button" value="Play" />
+    <input class="play" type="button" id="play" value="Play" />
     <div id="timer"></div>
     <div id="text"> </div> 
-    <div id="total">0</div>
+    <div id="total">666</div>
     </form>
-    
+    </div>
 
     
     <script>
       let timerInput = document.getElementById("time");
-      let buttonRun = document.getElementById("button")
+      let buttonRun = document.getElementById("play");
       let timerShow = document.getElementById("timer");
       buttonRun.addEventListener('click', function() {
           timeMinut = parseInt(timerInput.value) 
