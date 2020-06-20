@@ -22,7 +22,6 @@ input, button {
 }
 
 body {
-    margin: 1px;
     margin-top: 1px;
     margin-right: 1px;
     margin-bottom: 1px;
@@ -34,7 +33,10 @@ body {
     width: 185px;
     top: 260px;
     left: 100px;
-    margin: auto;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     position: absolute;
     font-weight: bold;
@@ -49,7 +51,10 @@ body {
     width: 185px;
     top: 260px;
     left: 290px;
-    margin: auto;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     position: absolute;
     font-weight: bold;
@@ -64,7 +69,10 @@ body {
     width: 375px;
     top: 260px;
     left: 100px;
-    margin: auto;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
     position: fixed;
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -78,7 +86,10 @@ body {
     width: 375px;
     top: 440px;
     left: 100px;
-    margin: auto;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
     font: 66px Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: bold;
     position: absolute;
@@ -141,7 +152,10 @@ body {
         width: 185px;
         top: 260px;
         left: 515px;
-        margin: auto;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        margin-left: 1px;
         position: absolute;
         font: 50px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
@@ -158,7 +172,10 @@ body {
         width: 185px;
         top: 260px;
         left: 705px;
-        margin: auto;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        margin-left: 1px;
         position: absolute;
         font: 50px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
@@ -175,7 +192,10 @@ body {
         width: 375px;
         top: 440px;
         left: 515px;
-        margin:auto;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        margin-left: 1px;
         position: absolute;
         font: 60px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
