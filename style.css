@@ -33,7 +33,7 @@ body {
     height: 150px;
     width: 185px;
     top: 260px;
-    left: 37%;
+    left: 366px;
     margin-left: -265px;
     margin-top: 2px;
     margin-right: 2px;
@@ -51,7 +51,7 @@ body {
     height: 150px;
     width: 185px;
     top: 260px;
-    left: 56.5%;
+    left: 555px;
     margin-left: -265px;
     margin-top: 2px;
     margin-right: 2px;
@@ -69,7 +69,7 @@ body {
     height: 150px;
     width: 375px;
     top: 260px;
-    left: 37%;
+    left: 366px;
     margin-left: -265px;
     margin-top: 2px;
     margin-right: 2px;
@@ -149,16 +149,16 @@ body {
     -webkit-text-stroke-color: black;
 }
 .min {
-        height: 70px;
+        height: 150px;
         width: 185px;
-        top: 440px;
-        left: 80%;
+        top: 260px;
+        left: 780px;
         margin-left: -265px;
         margin-top: 2px;
         margin-right: 2px;
         margin-bottom: 2px;
         position: absolute;
-        font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
+        font: 50px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
         color: white;
         text-decoration: none;
@@ -169,16 +169,16 @@ body {
       
 }
 .onehalf {
-        height: 70px;
+        height: 150px;
         width: 185px;
-        top: 440px;
-        left: 99.5%;
+        top: 260px;
+        left: 970px;
         margin-left: -265px;
         margin-top: 2px;
         margin-right: 2px;
         margin-bottom: 2px;
         position: absolute;
-        font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
+        font: 50px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
         color: white;
         text-decoration: none;
@@ -189,16 +189,16 @@ body {
 }
 
 .Reset {
-        height: 70px;
+        height: 150px;
         width: 375px;
-        top: 520px;
-        left: 80%;
+        top: 440px;
+        left: 780px;
         margin-left: -265px;
         margin-top: 2px;
         margin-right: 2px;
         margin-bottom: 2px;
         position: absolute;
-        font: 30px Trebuchet MS, Arial, Helvetica, sans-serif;
+        font: 60px Trebuchet MS, Arial, Helvetica, sans-serif;
         font-weight: bold;
         color: white;
         text-decoration: none;
