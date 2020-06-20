@@ -21,14 +21,7 @@ input, button {
 
 }
 
-body {
-    margin: 1px;
-    margin-top: 1px;
-    margin-right: 1px;
-    margin-bottom: 1px;
-    margin-left: 1px;
-    position: fixed;
-}
+
 #minus {
     height: 150px;
     width: 185px;
