@@ -110,8 +110,8 @@ body {
 
 }
 #time {
-    height: 144px;
-    width: 367px;
+    height: 150px;
+    width: 375px;
     top: 15%;
     left: 80%;
     margin-left: -265px;
@@ -121,7 +121,7 @@ body {
     font-weight: bold;
     position: absolute;
     text-align: center;
-   
+    box-sizing: content-box;
 }
 
 #total{
