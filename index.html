@@ -70,10 +70,11 @@
       var timerInput = document.getElementById("time");
       var buttonRun = document.getElementById("play");
       var timerShow = document.getElementById("timer");
+      var pluss = document.getElementById("plus");
       buttonRun.addEventListener('click', function() {
            timeMinut = parseInt(timerInput.value)
       })
-
+      
       timer = setInterval(function () {
       seconds = timeMinut%60
       minutes = timeMinut/60%60
@@ -81,10 +82,12 @@
       if (timeMinut <= 0) {
           clearInterval(timer);
           alert("Время закончилось");
-        
+          pluss.disabled=true;
+         
       } else {
           let strTimer = `${Math.trunc(minutes)}:${seconds}`;
           timerShow.innerHTML = strTimer;
+          
       }
       --timeMinut;
   }, 1000)
