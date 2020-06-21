@@ -15,32 +15,49 @@
    <form onclick="var randIndex = Math.floor(Math.random() * phrases.length);
       document.getElementById('play').onclick = function() {
       document.getElementById('text').textContent = (phrases[randIndex]);
-      document.getElementById('play').disabled = true;
+      this.disabled=true;
       this.style.backgroundColor = 'gray';
-      this.style.boxShadow = '0 -5px gray';
-      }
+      this.style.color = 'black';
+      document.getElementById('plus').disabled=false;
+      document.getElementById('minus').disabled=false;
+      };
       document.getElementById('plus').onclick = function() {
       num++;
       elem.innerHTML = num;
       document.getElementById('text').textContent = (phrases[randIndex]);
-      }
+      };
       document.getElementById('minus').onclick = function() {
       num--;
       elem.innerHTML = num;
       document.getElementById('text').textContent = (phrases[randIndex]);
-       }">
+      };
+   
+       ">
     
     
-  
+   
     <input type="text" name="time" id="time">
-    <input type="submit" class="min" onclick="document.getElementById('time').value='60'; return false;" value ="1min"/>
-    <input type="submit"  class="onehalf" onclick="document.getElementById('time').value='90'; return false;"  value ="1.5min"/>
-    <input type="submit" class="Reset" value="Reset">
-    <input id="minus" type="button" value="-">
-    <input id="plus" type="button" value="+">
-    <input class="play" type="button" id="play" value="Play" />
-    <div id="timer"></div>
-    <div id="text"> </div> 
+    <input type="button" value ="1min" id="min" onclick = "document.getElementById('time').value='60';
+      this.style.backgroundColor = 'gray';
+      this.style.boxShadow = '0 -0px gray';
+      this.style.color = 'black';
+      getElementById('onehalf').style.backgroundColor = 'rgb(64,199,129)';
+      document.getElementById('play').disabled=false;
+      "/>
+    <input type="button" id="onehalf" value ="1.5min" onclick = "document.getElementById('time').value='90';
+      this.style.backgroundColor = 'gray';
+      this.style.boxShadow = '0 -0px gray';
+      this.style.color = 'black';
+      getElementById('min').style.backgroundColor = 'rgb(64,199,129)';
+      document.getElementById('play').disabled=false;
+
+      "/>
+    <input type="submit" id="Reset" value="Reset">
+    <input id="minus" type="button" value="-" disabled=true>
+    <input id="plus" type="button" value="+" disabled=true>
+    <input type="button" id="play" value="Play" disabled=true />
+    <div id="timer">:</div>
+    <div id="text"></div> 
     <div id="total"></div>
     </form>
     </div>
@@ -51,7 +68,7 @@
       var buttonRun = document.getElementById("play");
       var timerShow = document.getElementById("timer");
       buttonRun.addEventListener('click', function() {
-          timeMinut = parseInt(timerInput.value) 
+           timeMinut = parseInt(timerInput.value)
       })
 
       timer = setInterval(function () {
