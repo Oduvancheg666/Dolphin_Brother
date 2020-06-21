@@ -21,12 +21,14 @@
       document.getElementById('text').textContent = (phrases[randIndex]); }
       document.getElementById('plus').onclick = function() {
       num++;
-      elem.innerHTML = num;}
+      elem.innerHTML = num;
+      document.getElementById('text').textContent = (phrases[randIndex]);
+      }
       document.getElementById('minus').onclick = function() {
       num--;
-      elem.innerHTML = num;}
-      
-      ">
+      elem.innerHTML = num;
+      document.getElementById('text').textContent = (phrases[randIndex]);
+       }">
     
     
     <input class="next" type="button" id="next" value="Next" />
@@ -45,9 +47,9 @@
 
     
     <script>
-      let timerInput = document.getElementById("time");
-      let buttonRun = document.getElementById("play");
-      let timerShow = document.getElementById("timer");
+      var timerInput = document.getElementById("time");
+      var buttonRun = document.getElementById("play");
+      var timerShow = document.getElementById("timer");
       buttonRun.addEventListener('click', function() {
           timeMinut = parseInt(timerInput.value) 
       })
