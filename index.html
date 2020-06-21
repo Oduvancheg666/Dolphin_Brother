@@ -15,10 +15,10 @@
    <form onclick="var randIndex = Math.floor(Math.random() * phrases.length);
       document.getElementById('play').onclick = function() {
       document.getElementById('text').textContent = (phrases[randIndex]);
-      document.getElementById('play').hidden = true; 
+      document.getElementById('play').disabled = true;
+      this.style.backgroundColor = 'gray';
+      this.style.boxShadow = '0 -5px gray';
       }
-      document.getElementById('next').onclick = function() {
-      document.getElementById('text').textContent = (phrases[randIndex]); }
       document.getElementById('plus').onclick = function() {
       num++;
       elem.innerHTML = num;
@@ -31,7 +31,7 @@
        }">
     
     
-    <input class="next" type="button" id="next" value="Next" />
+  
     <input type="text" name="time" id="time">
     <input type="submit" class="min" onclick="document.getElementById('time').value='60'; return false;" value ="1min"/>
     <input type="submit"  class="onehalf" onclick="document.getElementById('time').value='90'; return false;"  value ="1.5min"/>
@@ -71,7 +71,9 @@
       var elem = document.getElementById('total'), num = +elem.innerHTML;
       function addNum() {
         num++;
-      elem.innerHTML = num;}
+      elem.innerHTML = num;};
+
+
 
 
 
