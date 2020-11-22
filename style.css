@@ -88,7 +88,7 @@ body {
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     position: relative;
-    top: 17%;
+    top: 25%;
 }
 #timer{
     display: inline-block;
@@ -99,7 +99,7 @@ body {
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     position: relative;
-    top: 23%;
+    top: 26%;
    
 
 }
@@ -116,7 +116,7 @@ body {
     -webkit-text-stroke-width: 2.5px;
     -webkit-text-stroke-color: black;
     position: relative;
-    top: 14%;
+    top: 25%;
 }
 #min {
         height: 8%;
