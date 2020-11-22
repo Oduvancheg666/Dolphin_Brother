@@ -37,7 +37,7 @@
 
   <script>
   var i = 0;
-  var phrases = [
+var phrases = [
     "ЛЫЖНИК",
     "СТЕНГАЗЕТА",
     "ЖАЛОСТЬ",
@@ -2321,7 +2321,6 @@
     "ФОРТ",
     "БЕССОННИЦА",
     "СКУНС",
-    "ФУТБОЛ",
 ];
  
   $(function () {
@@ -2369,6 +2368,45 @@
       var onehalf = document.getElementById('onehalf');
       var endwindow = document.getElementById('endwindow');
       var endbutton = document.getElementById('endbutton');
+      var timer = document.getElementById('timer');
+      
+      function addNum() {
+        num++;
+      total.innerHTML = num;}
+
+      play.addEventListener('click', function() {
+        text.textContent = (phrases[randIndex]);
+        timeMinut = parseInt(timerInput.value);
+        this.disabled=true;
+        this.style.backgroundColor = '#40777b';
+        this.style.color = '#352121';
+        plus.disabled=false;
+        minus.disabled=false;
+        timer = setInterval(function () {
+            seconds = timeMinut%60;
+            minutes = timeMinut/60%60;
+              if (timeMinut <= 0) {
+                  clearInterval(timerShow);
+                  endwindow.style.display="block";
+            } else if (timeMinut <= 91 && timeMinut >= 1)  {
+              var strTimer = `${Math.trunc(minutes)}:${seconds}`;
+              timerShow.innerHTML = strTimer;
+              }
+          --timeMinut;
+          }, 1000);
+            });
+
+      plus.addEventListener('click', function() {
+        num++;
+        total.innerHTML = num;
+        endtotal.innerHTML = num;
+         });
+
+      minus.addEventListener('click', function() {
+        num--;
+        total.innerHTML = num;
+        endtotal.innerHTML = total.innerHTML;
+         });
 
       min.addEventListener('click', function() {
           timerInput.value='60';
@@ -2388,58 +2426,31 @@
           play.disabled=false;
           this.disabled=true;
           min.disabled=true;
-      });
-      play.addEventListener('click', function() {
-           timeMinut = parseInt(timerInput.value);
-      });
-          timer = setInterval(function () {
-          seconds = timeMinut%60;
-          minutes = timeMinut/60%60;
-   
-        if (timeMinut <= 0) {
-            clearInterval(timerShow);
-            endwindow.style.display="block";
-           
-        } else if (timeMinut <= 91 && timeMinut >= 1)  {
-            var strTimer = `${Math.trunc(minutes)}:${seconds}`;
-            timerShow.innerHTML = strTimer;
-            }
-      
-      --timeMinut;
-      }, 1000);
-      
-      function addNum() {
-        num++;
-      total.innerHTML = num;}
-      
-    
-
-      play.addEventListener('click', function() 
-        {text.textContent = (phrases[randIndex]);
-        this.disabled=true;
-        this.style.backgroundColor = '#40777b';
-        this.style.color = '#352121';
-        plus.disabled=false;
-        minus.disabled=false;
-        });
-      plus.addEventListener('click', function() {
-        num++;
-        total.innerHTML = num;
-        endtotal.innerHTML = num;
-         });
-      minus.addEventListener('click', function() {
-        num--;
-        total.innerHTML = num;
-        endtotal.innerHTML = total.innerHTML;
          });
 
-      reset.addEventListener('click', function() {
-          window.location.reload();});
+       function clearAll() {
+            text.textContent = " ";
+            num = 0;
+            total.textContent = " ";
+            clearInterval(timer);
+            min.style.backgroundColor = "#57B6BD";
+            min.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
+            min.style.color = 'white';
+            min.disabled=false;
+            onehalf.style.backgroundColor = "#57B6BD";
+            onehalf.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
+            onehalf.style.color = 'white';
+            onehalf.disabled=false;
+            play.style.backgroundColor = "#57B6BD";
+            play.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
+            play.style.color = 'white';
+            play.disabled=true;
+            endwindow.style.display = "none";
+        };
 
-      endbutton.addEventListener('click', function() {
-          endwindow.style.display = "none";
-          window.location.reload();
-        });
+        reset.addEventListener('click', clearAll);
+        endbutton.addEventListener('click', clearAll);
+      
   </script>
 
 
