@@ -2341,7 +2341,11 @@ var phrases = [
                 showText(this, phrases[i]);
             }); ;
  
-            function showText(minus, text) {
+    $('#play').click(function () {
+                i = Math.floor(Math.random() * phrases.length)
+                showText(this, phrases[i]);
+            }); ;
+        function showText(minus, text) {
                 var minus = $('#minus');
                 var textmsg = $('#text');
                 minus.fadeOut(0, function () {
@@ -2349,7 +2353,8 @@ var phrases = [
                     minus.fadeIn(0);
                 });
             }
-        });
+            });
+
 
       var reset = document.getElementById('reset');
       var timerInput = document.getElementById('timerInput');
@@ -2372,7 +2377,6 @@ var phrases = [
       total.innerHTML = num;}
 
       play.addEventListener('click', function() {
-        text.textContent = (phrases[randIndex]);
         timeMinut = parseInt(timerInput.value);
         this.disabled=true;
         this.style.backgroundColor = '#40777b';
