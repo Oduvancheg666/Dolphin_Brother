@@ -1,0 +1,3 @@
+if (textmsg.length > 5) {
+                    textmsg.style.fontSize = '10px'};
+                    else {textmsg.style.fontSize = '82px'};
