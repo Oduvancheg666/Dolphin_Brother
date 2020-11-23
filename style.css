@@ -1,6 +1,6 @@
 html {
    -webkit-text-size-adjust : 100%;
-   text-size-adjust         : 100%
+   text-size-adjust         : 100%;
 }
 
 html, body {
@@ -219,7 +219,7 @@ button {
 
 #endtext {
     font-size: 75px;
-    font-family: 'Nerko One', cursive;
+    font-family: 'Nerko One', Trebuchet MS, Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: #e4e4e4;
     margin-top: 20%;
