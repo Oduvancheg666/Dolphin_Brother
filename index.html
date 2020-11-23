@@ -24,7 +24,7 @@
     <div id="timer">0:00</div>
     <div id="text"></div> 
     <div id="total"></div>
-    <input type="text" name="time" id="timerInput" value="500">
+    <input type="text" name="time" id="timerInput" value="">
 
     <div id="endwindow">
         <div Id="endtext">ВРЕМЯ ЗАКОНЧИЛОСЬ. <br>
@@ -2324,7 +2324,6 @@ var phrases = [
 ];
  
   $(function () {
-
     $('#plus').click(function () {
                 i = Math.floor(Math.random() * phrases.length)
                 showText(this, phrases[i]);
@@ -2335,9 +2334,8 @@ var phrases = [
                 plus.fadeOut(0, function () {
                     textmsg.html(text);
                     plus.fadeIn(0);
-                });
-            }
-        
+                });}
+            
     $('#minus').click(function () {
                 i = Math.floor(Math.random() * phrases.length)
                 showText(this, phrases[i]);
@@ -2353,7 +2351,6 @@ var phrases = [
             }
         });
 
-      
       var reset = document.getElementById('reset');
       var timerInput = document.getElementById('timerInput');
       var timerShow = document.getElementById('timer');
@@ -2368,7 +2365,7 @@ var phrases = [
       var onehalf = document.getElementById('onehalf');
       var endwindow = document.getElementById('endwindow');
       var endbutton = document.getElementById('endbutton');
-      var timer = document.getElementById('timer');
+      
       
       function addNum() {
         num++;
@@ -2430,6 +2427,7 @@ var phrases = [
 
        function clearAll() {
             text.textContent = " ";
+            timerShow.textContent = "0:00";
             num = 0;
             total.textContent = " ";
             clearInterval(timer);
@@ -2446,6 +2444,8 @@ var phrases = [
             play.style.color = 'white';
             play.disabled=true;
             endwindow.style.display = "none";
+            minus.disabled=true;
+            plus.disabled=true;
         };
 
         reset.addEventListener('click', clearAll);
