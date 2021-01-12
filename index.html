@@ -10,34 +10,8 @@
     <link rel="icon" type="image/png" href="logo_2.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-  </head>
-
-  <body>
-    <div id="name">Dolphin's Brother</div>
-    <img id="logo" src="logo_1.png">
-    <button id="min">1min</button>
-    <button id="onehalf" >1.5min</button>
-    <button id="reset">Reset</button>
-    <button id="minus" disabled=true> - </button>
-    <button id="plus" disabled=true> + </button>
-    <button id="play" disabled=true>Play</button>
-    <div id="timer">0:00</div>
-    <div id="text"></div> 
-    <div id="total"></div>
-    <input type="text" name="time" id="timerInput" value="">
-
-    <div id="endwindow">
-        <div Id="endtext">ВРЕМЯ ЗАКОНЧИЛОСЬ. <br>
-        ВАШ СЧЁТ:<div id="endtotal"></div>
-        <button id="endbutton">ОК</button></div>
-    </div>
-
-  </body>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-  <script>
-  var i = 0;
-var phrases = [
+    <script type="text/javascript">
+      var phrases = [
     "ЛЫЖНИК",
     "СТЕНГАЗЕТА",
     "ЖАЛОСТЬ",
@@ -2322,6 +2296,35 @@ var phrases = [
     "БЕССОННИЦА",
     "СКУНС",
 ];
+    </script>
+  </head>
+
+  <body>
+    <div id="name">Dolphin's Brother</div>
+    <img id="logo" src="logo_1.png">
+    <button id="min">1min</button>
+    <button id="onehalf" >1.5min</button>
+    <button id="reset">Reset</button>
+    <button id="minus" disabled=true> - </button>
+    <button id="plus" disabled=true> + </button>
+    <button id="play" disabled=true>Play</button>
+    <div id="timer">0:00</div>
+    <div id="text"></div> 
+    <div id="total"></div>
+    <input type="text" name="time" id="timerInput" value="">
+
+    <div id="endwindow">
+        <div Id="endtext">ВРЕМЯ ЗАКОНЧИЛОСЬ. <br>
+        ВАШ СЧЁТ:<div id="endtotal"></div>
+        <button id="endbutton">ОК</button></div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+  <script>
+  var i = 0;
+
  
   $(function () {
     $('#plus').click(function () {
