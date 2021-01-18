@@ -2345,9 +2345,12 @@
             }); ;
  
     $('#play').click(function () {
+        if (timerInput.value != 60 && timerInput.value != 90) {
+            alert('укажите время');}
+        else {
                 i = Math.floor(Math.random() * phrases.length)
                 showText(this, phrases[i]);
-            }); ;
+            }}); ;
         function showText(minus, text) {
                 var minus = $('#minus');
                 var textmsg = $('#text');
@@ -2380,6 +2383,10 @@
       total.innerHTML = num;}
 
       play.addEventListener('click', function() {
+        if (timerInput.value != 60 && timerInput.value != 90) {
+           ;}
+        else {
+
         timeMinut = parseInt(timerInput.value);
         this.disabled=true;
         this.style.backgroundColor = '#40777b';
@@ -2398,9 +2405,10 @@
               }
           --timeMinut;
           }, 1000);
-            });
+            }});
 
       plus.addEventListener('click', function() {
+        text.textContent =(phrases[randIndex]);
         num++;
         total.innerHTML = num;
         endtotal.innerHTML = num;
@@ -2435,6 +2443,7 @@
        function clearAll() {
             text.textContent = " ";
             timerShow.textContent = "0:00";
+            timerInput.value = "61";
             num = 0;
             total.textContent = " ";
             clearInterval(timer);
@@ -2449,7 +2458,7 @@
             play.style.backgroundColor = "#57B6BD";
             play.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
             play.style.color = 'white';
-            play.disabled=true;
+            play.disabled=false;
             endwindow.style.display = "none";
             minus.disabled=true;
             plus.disabled=true;
