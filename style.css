@@ -14,7 +14,7 @@ html, body {
     overflow: hidden;
 }
 
-input, button { 
+ button { 
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -244,3 +244,72 @@ button {
     transition: 1.2s;
 }
 
+#menu {
+    display: none;
+    width: 95%;
+    height: 60%;
+    text-align: center;
+    padding: 15px;
+    border: 3px solid #352121;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    background-color: #346C70;
+    font-size: 75px;
+    font-family: 'Nerko One', cursive;
+    color: #e4e4e4;
+}   
+#resstartBtn {
+    height: 15%;
+    width: 35%;
+    top: 75%;
+    left: 57.5%;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    position: absolute;
+    font: 60px Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;  
+    box-shadow: 2px -3px rgb(0,0,0) inset;
+    background-color:  red;
+}
+#continueBtn {
+    height: 15%;
+    width: 35%;
+    top: 75%;
+    left: 12%;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    position: absolute;
+    font: 60px Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;  
+    box-shadow: 2px -3px rgb(0,0,0) inset;
+    background-color:  blue;
+}
+
+#teams {
+    margin: 10px;
+
+}
+
+#teamDolphin {
+    float: left;
+}
+
+#teamKoyot {
+    float: right;
+}
+
+#pointsOfRound {
+    font-size: 35px;
+    float: left;
+}
