@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <script type="text/javascript">
-      var phrases = [
+var phrases = [
     "ЛЫЖНИК",
     "СТЕНГАЗЕТА",
     "ЖАЛОСТЬ",
@@ -2300,6 +2300,14 @@
   </head>
 
   <body>
+    <div id="teams">
+            <input type="radio" id="dolphinRadio"
+             name="teams" value="1" checked>
+            <label for="dolphin">dolphin</label>
+            <input type="radio" id="koyotRadio"
+             name="teams" value="2">
+            <label for="koyot">koyot</label>
+    </div>
     <div id="name">Dolphin's Brother</div>
     <img id="logo" src="logo_1.png">
     <button id="min">1min</button>
@@ -2318,11 +2326,22 @@
         ВАШ СЧЁТ:<div id="endtotal"></div>
         <button id="endbutton">ОК</button></div>
     </div>
-
+    
+    <div id="menu"><button id="resstartBtn">New Game</button>
+            <button id="continueBtn">Continue</button>
+            <div id="teamDolphin">Dolphin's Team total = <span id="ttlOne">0</span></div>
+            <div id="teamKoyot">Koyot's Team total = <span id="ttlTwo">0</span></div>
+            <br>
+            <br>
+            <br>
+            <div id="pointsOfRound">Dolphin's Team points for each round = <span id="scoreOne">0</span><br>Koyot's Team points for each round = <span id="scoreTwo">0</span></div>
+    </div>
+  
   </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <script>
+    
   var i = 0;
 
  
@@ -2376,11 +2395,43 @@
       var onehalf = document.getElementById('onehalf');
       var endwindow = document.getElementById('endwindow');
       var endbutton = document.getElementById('endbutton');
-      
+      var dolphinRadio = document.getElementById('dolphinRadio');
+      var koyotRadio = document.getElementById('koyotRadio');
+      var teams = document.getElementsByName('teams');
+      var ttlOne = document.getElementById('ttlOne');
+      var ttlTwo = document.getElementById('ttlTwo');
+      var scoreOne = document.getElementById('scoreOne');
+      var scoreTwo = document.getElementById('scoreTwo');
+      var x = dolphinRadio.checked;
+      var blank = "|";
+      var space = " ";
+      var menu = document.getElementById('menu');
+      var logo = document.getElementById('logo');
+      var continueBtn = document.getElementById('continueBtn');
+      var resstartBtn = document.getElementById('resstartBtn');
       
       function addNum() {
         num++;
       total.innerHTML = num;}
+
+      function ScoreOfRound() {
+      x = dolphinRadio.checked;
+      if(x == true){
+        scoreOne.innerHTML = space + scoreOne.innerHTML + blank + total.innerHTML + space;}
+      else { 
+        scoreTwo.innerHTML = space + scoreTwo.innerHTML  + blank + total.innerHTML + space
+      ;}}
+
+      function ttl() {
+      x = dolphinRadio.checked;
+      var totalNum = parseInt(total.innerHTML);
+      var ttlOneNum = parseInt(ttlOne.innerHTML);
+      var ttlTwoNum = parseInt(ttlTwo.innerHTML);
+      if(x == true){
+        ttlOne.innerHTML = ttlOneNum + totalNum;}
+      else { 
+        ttlTwo.innerHTML = ttlTwoNum + totalNum
+      ;}}
 
       play.addEventListener('click', function() {
         if (timerInput.value != 60 && timerInput.value != 90) {
@@ -2406,6 +2457,14 @@
           --timeMinut;
           }, 1000);
             }});
+
+       function switchRaido () {
+         if(x == true){
+            koyotRadio.checked = true;}
+         else {
+           dolphinRadio.checked = true;
+         }
+         };
 
       plus.addEventListener('click', function() {
         text.textContent =(phrases[randIndex]);
@@ -2440,7 +2499,7 @@
           min.disabled=true;
          });
 
-       function clearAll() {
+         function resetAll() {
             text.textContent = " ";
             timerShow.textContent = "0:00";
             timerInput.value = "61";
@@ -2464,8 +2523,29 @@
             plus.disabled=true;
         };
 
-        reset.addEventListener('click', clearAll);
+       function clearAll() {
+            ScoreOfRound();
+            ttl();
+            switchRaido();
+            resetAll();
+
+        };
+        
+
+        reset.addEventListener('click', resetAll);
         endbutton.addEventListener('click', clearAll);
+
+        logo.addEventListener('click',function () {
+            menu.style.display = "block";
+        });
+
+        continueBtn.addEventListener('click',function () {
+            menu.style.display = "none";
+        });
+
+        resstartBtn.addEventListener('click',function () {
+            location.reload();
+        });
       
   </script>
 
