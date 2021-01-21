@@ -11,6 +11,14 @@
     <link rel="icon" type="image/png" href="logo_2.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+     <script type="text/javascript">
+       document.addEventListener('touchmove', function(event) {
+        event = event.originalEvent || event;
+        if(event.scale > 1) {
+          event.preventDefault();
+        }
+      }, false);
+  </script>
     <script type="text/javascript">
 var phrases = [
     "ЛЫЖНИК",
