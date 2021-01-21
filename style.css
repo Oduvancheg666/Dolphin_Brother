@@ -12,7 +12,7 @@ html, body {
     text-align: center;
     font-family:'Roboto Slab', serif;
     overflow: hidden;
-    touch-action: none;
+  
 }
 
 button { 
