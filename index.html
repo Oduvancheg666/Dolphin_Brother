@@ -2341,7 +2341,16 @@ var phrases = [
             <br>
             <div id="pointsOfRound">Dolphin's Team points for each round = <span id="scoreOne">0</span><br>Koyot's Team points for each round = <span id="scoreTwo">0</span></div>
     </div>
-  
+    <script type="text/javascript">
+       var lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+          var now = (new Date()).getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+    }, false);
+  </script>
   </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
