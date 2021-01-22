@@ -2318,13 +2318,14 @@ var phrases = [
     <button id="min">1min</button>
     <button id="onehalf" >1.5min</button>
     <button id="reset">Reset</button>
-    <button id="minus" disabled=true> - </button>
-    <button id="plus" disabled=true> + </button>
+    <button id="minus" class="disabledBtn" disabled=true> - </button>
+    <button id="plus" class="disabledBtn" disabled=true> + </button>
     <button id="play">Play</button>
     <div id="timer">0:00</div>
     <div id="text"></div> 
     <div id="total"></div>
     <input type="text" name="time" id="timerInput" value="">
+  
 
     <div id="endwindow">
         <div Id="endtext">ВРЕМЯ ЗАКОНЧИЛОСЬ. <br>
@@ -2350,11 +2351,19 @@ var phrases = [
           }
           lastTouchEnd = now;
     }, false);
+         $(document).bind("touchstart", function(e) {
+            e.preventDefault();
+            var orig = e.originalEvent;
+            var x = orig.changedTouches[0].pageX;
+            var y = orig.changedTouches[0].pageY;
+        $("#timer").css({top: y, left: x});
+        });
   </script>
   </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <script>
+
   var i = 0;
 
  
@@ -2392,7 +2401,7 @@ var phrases = [
                 });
             }
             });
-
+ 
 
       var reset = document.getElementById('reset');
       var timerInput = document.getElementById('timerInput');
@@ -2422,6 +2431,7 @@ var phrases = [
       var logo = document.getElementById('logo');
       var continueBtn = document.getElementById('continueBtn');
       var resstartBtn = document.getElementById('resstartBtn');
+
       
       function addNum() {
         num++;
@@ -2446,6 +2456,8 @@ var phrases = [
         ttlTwo.innerHTML = ttlTwoNum + totalNum
       ;}}
 
+     
+
       play.addEventListener('click', function() {
         if (timerInput.value != 60 && timerInput.value != 90) {
            ;}
@@ -2453,10 +2465,11 @@ var phrases = [
 
         timeMinut = parseInt(timerInput.value);
         this.disabled=true;
-        this.style.backgroundColor = '#40777b';
-        this.style.color = '#352121';
+        this.classList.toggle('disabledBtn'); 
         plus.disabled=false;
         minus.disabled=false;
+        plus.classList.toggle('disabledBtn'); 
+        minus.classList.toggle('disabledBtn'); 
         timer = setInterval(function () {
             seconds = timeMinut%60;
             minutes = timeMinut/60%60;
@@ -2494,49 +2507,41 @@ var phrases = [
 
       min.addEventListener('click', function() {
           timerInput.value='60';
-          this.style.backgroundColor = '#40777b';
-          this.style.boxShadow = '0 -0px #40777b';
-          this.style.color = '#352121';
           play.disabled=false;
-          this.disabled=true;
           onehalf.disabled=true;
+          this.disabled=true;
+          this.classList.add('disabledBtn');
         });
 
       onehalf.addEventListener('click', function() {
           timerInput.value='90';
-          this.style.backgroundColor = '#40777b';
-          this.style.boxShadow = '0 -0px #40777b';
-          this.style.color = '#352121';
           play.disabled=false;
           this.disabled=true;
           min.disabled=true;
+          this.classList.add('disabledBtn');
          });
 
-         function resetAll() {
+        function resetAll() {
             text.textContent = " ";
             timerShow.textContent = "0:00";
             timerInput.value = "61";
             num = 0;
             total.textContent = " ";
             clearInterval(timer);
-            min.style.backgroundColor = "#57B6BD";
-            min.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
-            min.style.color = 'white';
             min.disabled=false;
-            onehalf.style.backgroundColor = "#57B6BD";
-            onehalf.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
-            onehalf.style.color = 'white';
             onehalf.disabled=false;
-            play.style.backgroundColor = "#57B6BD";
-            play.style.boxShadow =  "1px -3px rgb(0,0,0) inset";
-            play.style.color = 'white';
             play.disabled=false;
             endwindow.style.display = "none";
             minus.disabled=true;
             plus.disabled=true;
+            plus.classList.toggle('disabledBtn'); 
+            minus.classList.toggle('disabledBtn'); 
+            play.classList.toggle('disabledBtn');
+            min.classList.remove('disabledBtn');
+            onehalf.classList.remove('disabledBtn');
         };
 
-       function clearAll() {
+        function clearAll() {
             ScoreOfRound();
             ttl();
             switchRaido();
