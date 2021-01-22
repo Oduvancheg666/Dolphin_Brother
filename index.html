@@ -2332,15 +2332,13 @@ var phrases = [
         ВАШ СЧЁТ:<div id="endtotal"></div>
         <button id="endbutton">ОК</button></div>
     </div>
-    
+    <br>
     <div id="menu"><button id="resstartBtn">New Game</button>
             <button id="continueBtn">Continue</button>
-            <div id="teamDolphin">Dolphin's Team total = <span id="ttlOne">0</span></div>
-            <div id="teamKoyot">Koyot's Team total = <span id="ttlTwo">0</span></div>
-            <br>
-            <br>
-            <br>
-            <div id="pointsOfRound">Dolphin's Team points for each round = <span id="scoreOne">0</span><br>Koyot's Team points for each round = <span id="scoreTwo">0</span></div>
+            <div id="teamDolphin">Dolphin <br> <span id="ttlOne">0</span></div>
+            <div id="teamKoyot">Koyot<br><span id="ttlTwo">0</span></div>
+           
+            <details id="pointsOfRound"> <summary>Очки за каждый раунд</summary> <div >Dolphin <br> <span id="scoreOne" class="scoreRound">0</span><br>Koyot <br><span id="scoreTwo" class="scoreRound">0</span></div> </details>
     </div>
     <script type="text/javascript">
        var lastTouchEnd = 0;
