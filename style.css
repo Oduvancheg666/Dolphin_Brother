@@ -303,16 +303,38 @@ button {
 }
 
 #teamDolphin {
-    float: left;
+   height: 8%;
+        width: 35%;
+        top: 3%;
+        left: 10%;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        margin-left: 1px;
+        position: absolute;
 }
 
 #teamKoyot {
-    float: right;
+    height: 8%;
+    width: 35%;
+    top: 3%;
+    left: 55%;
+    margin-top: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    position: absolute;
 }
 
 #pointsOfRound {
-    font-size: 35px;
-    float: left;
+        height: 8%;
+        width: 94%;
+        top: 35%;
+        left: 3%;
+        margin: auto;
+        position: absolute;
+        font-size: 35px;
+ 
 }
 
 label {
@@ -355,4 +377,7 @@ input:checked {
     
 }
 
+.scoreRound {
+    text-align: center;
+}
 
