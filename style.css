@@ -334,6 +334,7 @@ button {
         margin: auto;
         position: absolute;
         font-size: 35px;
+        font-family: Poiret One;
  
 }
 
@@ -379,5 +380,7 @@ input:checked {
 
 .scoreRound {
     text-align: center;
+    font-family: Poiret One;
+    font-style: normal;
 }
 
