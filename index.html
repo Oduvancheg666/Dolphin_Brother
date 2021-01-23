@@ -2345,18 +2345,11 @@ var phrases = [
        var lastTouchEnd = 0;
         document.addEventListener('touchend', function (event) {
           var now = (new Date()).getTime();
-          if (now - lastTouchEnd <= 300) {
+          if (now - lastTouchEnd <= 370) {
             event.preventDefault();
           }
           lastTouchEnd = now;
     }, false);
-         $(document).bind("touchstart", function(e) {
-            e.preventDefault();
-            var orig = e.originalEvent;
-            var x = orig.changedTouches[0].pageX;
-            var y = orig.changedTouches[0].pageY;
-        $("#timer").css({top: y, left: x});
-        });
   </script>
   </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
