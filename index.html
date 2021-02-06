@@ -2302,12 +2302,12 @@ var phrases = [
 
   <body>
     <div id="teams">
-        <span id="dolphinTeam">
+        <span id="dolphinTeamRadio">
             <input type="radio" id="dolphinRadio"
              name="teams" value="1" checked>
             <label for="dolphinRadio">Dolphin</label>
         </span>
-        <span id="koyotTeam">
+        <span id="koyotTeamRadio">
             <label for="koyotRadio">Koyot</label> 
             <input type="radio" id="koyotRadio"
              name="teams" value="2">
@@ -2336,8 +2336,8 @@ var phrases = [
     <br>
     <div id="menu"><button id="resstartBtn">New Game</button>
             <button id="continueBtn">Continue</button>
-            <div id="teamDolphin">Dolphin <br> <span id="ttlOne">0</span></div>
-            <div id="teamKoyot">Koyot<br><span id="ttlTwo">0</span></div>
+            <div id="teamDolphinScore">Dolphin <br> <span id="ttlOne">0</span></div>
+            <div id="teamKoyotScore">Koyot<br><span id="ttlTwo">0</span></div>
            
             <details onmousedown="return false" id="pointsOfRound"> <summary>Очки за каждый раунд</summary> <div >Dolphin <br> <span id="scoreOne" class="scoreRound">0</span> <hr><span id="scoreTwo" class="scoreRound">0</span><br> Koyot </div> </details>
     </div>
@@ -2532,12 +2532,29 @@ var phrases = [
             min.classList.remove('disabledBtn');
             onehalf.classList.remove('disabledBtn');
         };
+
+        timer.addEventListener('touchstart', function (ev) {   
+                timer.style.left = '0px';
+                timer.style.top = '400px';
+        });
         timer.addEventListener('touchmove', function (ev) {
-
+            
                 var touchLocation = ev.targetTouches[0];
-
+                
                 timer.style.left = touchLocation.pageX + 'px';
                 timer.style.top = touchLocation.pageY + 'px';
+        });
+
+        timer.addEventListener('touchend', function (ev) {
+      
+            var x = parseInt(timer.style.left);
+            var y = parseInt(timer.style.top);
+            if (x < -360 || x > 360) {
+                timer.style.left = '0px';
+            };
+            if (y < 100 || y > 1200) {
+                timer.style.top = '400px';
+            };
         });
 
         function clearAll() {
