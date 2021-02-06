@@ -99,7 +99,7 @@ body {
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     position: relative;
-    top: 4em;
+    top: 400px;
    
 
 }
@@ -302,8 +302,8 @@ button {
     padding: 15px;
 }
 
-#teamDolphin {
-   height: 8%;
+#teamDolphinScore {
+        height: 8%;
         width: 35%;
         top: 3%;
         left: 10%;
@@ -314,7 +314,7 @@ button {
         position: absolute;
 }
 
-#teamKoyot {
+#teamKoyotScore {
     height: 8%;
     width: 35%;
     top: 3%;
@@ -361,11 +361,11 @@ input {
 input:checked {
   border: 14px solid black;
 }
-#dolphinTeam {
+#dolphinTeamRadio {
     float: left;
     margin-left: 5%;
 }
-#koyotTeam {
+#koyotTeamRadio {
     float: right;
     margin-right: 5%;
 }
