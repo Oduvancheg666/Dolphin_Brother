@@ -2532,6 +2532,13 @@ var phrases = [
             min.classList.remove('disabledBtn');
             onehalf.classList.remove('disabledBtn');
         };
+        timer.addEventListener('touchmove', function (ev) {
+
+                var touchLocation = ev.targetTouches[0];
+
+                timer.style.left = touchLocation.pageX + 'px';
+                timer.style.top = touchLocation.pageY + 'px';
+        });
 
         function clearAll() {
             ScoreOfRound();
