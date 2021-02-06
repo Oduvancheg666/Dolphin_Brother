@@ -2351,8 +2351,8 @@ var phrases = [
           lastTouchEnd = now;
     }, false);
   </script>
-  </body>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <script>
 
@@ -2535,21 +2535,16 @@ var phrases = [
             timer.style.top = '400px';
         };
 
-        timer.addEventListener('touchstart', function (ev) {   
-                timer.style.left = '0px';
-                timer.style.top = '400px';
-        });
         timer.addEventListener('touchmove', function (ev) {
-            
-                var touchLocation = ev.targetTouches[0];
-                
-                
-                timer.style.top = touchLocation.pageY + 'px';
+                event.preventDefault();
+                var touchLocation = ev.targetTouches[0];    
+                timer.style.top = touchLocation.pageY - timer.offsetHeight * 2.5 + 'px';
         });
 
         timer.addEventListener('touchend', function (ev) {
+            event.preventDefault();
             var y = parseInt(timer.style.top);
-            if (y < 100 || y > 1200) {
+            if (y < -300 || y > 1350) {
                 timer.style.top = '400px';
             };
         });
@@ -2580,6 +2575,8 @@ var phrases = [
       
   </script>
 
+  </body>
+  
 
 
 
